@@ -79,7 +79,11 @@ fun TopBar(
 
 @Composable
 fun ProfileSection(modifier: Modifier = Modifier) {
-    Column(modifier = Modifier.fillMaxWidth()) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(15.dp)
+    ) {
 
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -89,12 +93,12 @@ fun ProfileSection(modifier: Modifier = Modifier) {
             RoundImage(
                 image = painterResource(id = R.drawable.progfile_image),
                 modifier = Modifier
-                    .size(100.dp)
+                    .size(80.dp)
                     .weight(3f)
             )
-            StatSection(modifier = modifier.weight(2.3f), statText = "100", textFields = "Follower")
-            StatSection(modifier = modifier.weight(2.3f), statText = "100", textFields = "Follower")
-            StatSection(modifier = modifier.weight(2.3f), statText = "100", textFields = "Follower")
+            StatSection(modifier = modifier.weight(2f), statText = "20", textFields = "Posts")
+            StatSection(modifier = modifier.weight(2f), statText = "69K", textFields = "Followers")
+            StatSection(modifier = modifier.weight(2f), statText = "5", textFields = "Following")
         }
 
     }
@@ -131,5 +135,15 @@ fun StatSection(
         Text(text = statText, fontWeight = FontWeight.Bold, fontSize = 20.sp)
         Spacer(modifier = Modifier.height(2.dp))
         Text(text = textFields)
+    }
+}
+
+@Composable
+fun BioStat(modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.Bottom
+    ) {
+
     }
 }
