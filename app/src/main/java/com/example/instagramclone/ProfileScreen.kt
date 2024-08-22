@@ -92,9 +92,9 @@ fun ProfileSection(modifier: Modifier = Modifier) {
                     .size(100.dp)
                     .weight(3f)
             )
-            StatSection(statText = "100", textFields = "Follower")
-            StatSection(statText = "100", textFields = "Follower")
-            StatSection(statText = "100", textFields = "Follower")
+            StatSection(modifier = modifier.weight(2.3f), statText = "100", textFields = "Follower")
+            StatSection(modifier = modifier.weight(2.3f), statText = "100", textFields = "Follower")
+            StatSection(modifier = modifier.weight(2.3f), statText = "100", textFields = "Follower")
         }
 
     }
@@ -124,8 +124,8 @@ fun StatSection(
     textFields: String
 ) {
     Column(
-        modifier = modifier.fillMaxWidth().padding(10.dp),
-        verticalArrangement = Arrangement.SpaceBetween,
+        modifier = modifier,
+        verticalArrangement = Arrangement.SpaceAround,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(text = statText, fontWeight = FontWeight.Bold, fontSize = 20.sp)
