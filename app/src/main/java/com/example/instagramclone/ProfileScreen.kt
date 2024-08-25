@@ -35,7 +35,9 @@ fun ProfileScreen() {
     Column(modifier = Modifier.fillMaxSize()) {
         TopBar(name = "Atharv Mishra")
         Spacer(modifier = Modifier.height(4.dp))
+
         ProfileSection()
+
     }
 }
 
