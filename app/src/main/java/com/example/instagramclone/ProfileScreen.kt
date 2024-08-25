@@ -144,6 +144,6 @@ fun BioStat(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.Bottom
     ) {
-        Text(text = "display Name   ")
+        Text(text = "display Name")
     }
 }
